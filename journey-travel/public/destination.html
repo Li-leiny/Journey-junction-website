@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details - Journey Junction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="destination">
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.webp" alt="Journey Junction Logo">
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-globe"> </i> Popular Destinations</a></li>
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About Kenya</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Hello <i class="fa-solid fa-face-smile"></i></button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Destination Details Section -->
+    <section class="destination-details">
+        <div class="container-destination">
+            <div class="destination-content">
+                <div class="destination-image">
+                    <img src="" alt="">
+                </div>
+                <div class="quick-info">
+                    <h2>Quick Information</h2>
+                    <p><strong>Best Time to Visit:</strong> <span id="best-time">July to October</span></p>
+                    <p><strong>Price Range:</strong> <span id="price-range">$200-500</span></p>
+                    <button class="btn btn-primary" onclick="redirectToBooking()">Book Now</button>
+                    <div class="location">
+                        <h2>Location</h2>
+                        <p id="destination-location"></p>
+                        <!-- Embedded Google Map -->
+                        <div class="map-container">
+                            <iframe id="map-iframe" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-info">
+                <h1 id="destination-name">Masai Mara National Reserve</h1>
+                <p id="destination-location"></p>
+                <div class="about">
+                    <h2>About</h2>
+                    <p id="about-text">Experience the world-famous wildlife sanctuary, home to the Great Migration and incredible year-round game viewing. Watch zebras and giraffes grazing on the savannah, and witness the diverse ecosystem that makes the Mara unique.</p>
+                </div>
+                <div class="cultural-info">
+                    <h2>Cultural Information</h2>
+                    <p id="cultural-info-text">Home to the Masai people, known for their distinctive customs and dress.</p>
+                </div>
+                <div class="transportation">
+                    <h2>Transportation Options</h2>
+                    <ul id="transportation-options">
+                        <!-- Transportation options will be dynamically added here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Journey Junction</h3>
+                    <p>Discover Kenya’s Beauty</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Journey Junction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="destination.js"></script>
+</body>
+</html>

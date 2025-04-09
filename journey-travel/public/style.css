@@ -1,0 +1,901 @@
+/* General Styles */
+body {font-family: "poppins", sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #16133f;
+}
+
+/* Header */
+.header {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(22, 19, 63, 0.5); /* #16133f with 50% opacity */
+    backdrop-filter: blur(10px); /* Adds a blur effect for the translucent background */
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    height: 80px; /* Adjust based on your header height */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between; /* Spaces out logo, center content, and auth buttons */
+    gap: 1rem; /* Adds spacing between elements */
+}
+
+.logo img {
+    height: 50px; /* Adjust the height of the logo */
+    width: auto; /* Maintains aspect ratio */
+    border-radius: 50%;
+    float: left;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 20px;
+    padding: 0;
+    float: left;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav ul li a:hover {
+    text-decoration: none;
+    color: #00ff95;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem; /* Adds spacing between buttons */
+    float: right;
+    margin-top: 10px;
+}
+
+.btn-outline {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.btn-outline:hover {
+        color: #ffffff;
+        background: #008cff;
+        border: 1px solid #008cff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+        box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+          0 0 100px #008cff;
+        border-radius: 50%;
+        transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./images/oip1.jpg'); /* Add your hero image here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+    height: 500px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px; /* Limits the search bar width */
+    margin: 0 auto;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+}
+
+.search-bar i {
+    color: #343a40;
+    margin-left: 0.5rem;
+}
+/* Featured Experiences */
+.featured-experiences {
+    padding: 2rem 0;
+    background-color: #16133f;
+}
+
+.featured-experiences h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #c8daf0;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #008cff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+}
+
+.experience-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #00ff95;
+}
+
+.experience-card p {
+    margin: 0 1rem 1rem;
+    color: #ffffff;
+}
+
+#FE {
+    color: purple;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* Popular Destinations Section */
+.popular-destinations {
+    padding: 2rem 0;
+    background-color: #16133f;
+    color: white;
+}
+
+.popular-destinations h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #c8daf0;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.attraction-card {
+    background-color:transparent;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #008cff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+      color: black;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.attraction-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #b4c5d7;
+}
+
+.attraction-card p {
+    margin: 0 1rem 1rem;
+    color: #1abb60;
+}
+
+.attraction-card .learn-more {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.attraction-card .learn-more a {
+    color: #feffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.attraction-card button{
+    padding:10px;
+    background-color: #008cff;
+    border-radius: 10px;
+}
+.attraction-card button:hover{
+
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+}
+
+.attraction-card .learn-more a:hover {
+    color: palevioletred;
+}
+
+
+/* Season Info Section */
+.season-info {
+    padding: 2rem 0;
+    background: url("./images/Kenya.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.season-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.season-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.season-card h3 {
+    margin-bottom: 1rem;
+    color: #0A2647;
+}
+
+.season-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.season-card ul li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 2rem 0;
+    background-color: #16133f;
+    color: white;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card:hover{
+    transform: translateY(-5px);
+}
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    text-align: right;
+}
+/* About Kenya Section */
+.about-kenya {
+    padding: 2rem 0;
+    background-image:url("./images/Nothern-Kenya-People-and-Places_Turkana-beadwork.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.about-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-card:hover{
+    transform: translateY(-5px);
+}
+.about-card h3 {
+    margin-bottom: 1rem;
+    color: #0A2647;
+}
+
+.about-card p {
+    color: #666;
+}
+/* Contact Us Section */
+.contact-us {
+    padding: 2rem 0;
+    background-color: #16133f;
+    color: white;
+    text-align: center;
+}
+
+.contact-us h2 {
+    margin-bottom: 2rem;
+    color: #00ff95;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ff95;
+}
+
+.contact-card h3 {
+    margin-bottom: 1rem;
+    color: #00ff95;
+}
+
+.contact-card p {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #0A2647;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #00ff95;
+}
+
+.footer-section p {
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #00ff95;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: white;
+}
+
+/* General Styles */
+.destination {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #16133f;
+}
+
+.container-destination {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Destination Details Section */
+
+.destination-details {
+    background-color: linear-gradient();
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.destination-image {
+    flex: 1;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+.destination-image img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+}
+.quick-info {
+    flex: 1;
+    padding: 1rem;
+    background-color:transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.quick-info:hover{
+
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+      transform: translateY(-2px);
+}
+
+.quick-info h2 {
+    margin-bottom: 1rem;
+    color: #00ff95;
+}
+
+.quick-info p {
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.btn-primary {
+    background: #00ff95;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+        color: #ffffff;
+        background: #008cff;
+        border: 1px solid #008cff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+        box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+      border-radius: 50%;
+    transform: translateY(-2px);
+}
+
+.destination-info {
+    margin-top: 2rem;
+}
+
+.destination-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #00ff95;
+}
+
+.destination-info p {
+    color: #fff;
+}
+
+.about, .cultural-info, .transportation {
+    margin-top: 2rem;
+}
+
+.about h2, .cultural-info h2, .transportation h2 {
+    margin-bottom: 1rem;
+    color: purple;
+}
+
+#transportation-options {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#transportation-options li {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    text-decoration-color: purple;
+    color: #ffffff;
+}
+
+/* Booking Section */
+.booking-section {
+    background: linear-gradient(135deg, #16133f, #1a1a2e);
+    color: white;
+    padding: 4rem 0;
+}
+
+#booking-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: purple;
+}
+
+#booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#booking-form:hover {
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
+    transform: translateY(-2px);
+}
+
+.form-group h2 {
+    color: #00ff95;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: pink;
+    font-weight: bold;
+}
+
+.form-group input{
+    color: purple;
+}
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #008cff;
+    outline: none;
+    box-shadow: 0 0 5px #008cff;
+}
+
+.phone-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.phone-input select {
+    flex: 1;
+}
+
+.phone-input input {
+    flex: 3;
+}
+
+#flight-details,
+#people-count,
+#mpesa-group,
+#card-group,
+#crypto-group {
+    display: none;
+}
+
+.total-cost {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.total-cost h2 {
+    color: #00ff95;
+    margin-bottom: 1rem;
+}
+
+.total-cost p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.form-row:last-child {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.pick{
+    height: 100px;
+    background: #00ff95;
+    border-color: purple;
+    border-style: double;
+    border: 10px;
+    color: white;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
+    border-radius: 50%;
+    transform: translateY(-2px);
+}
+.book{
+    text-decoration: none;
+    color: white;
+}
+
+/* confirmation section */
+.confirmation {
+    background-color: #16133f;
+    color: white;
+    padding: 2rem;
+}
+
+#booking-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+#download-pdf {
+    background: #00ff95;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#download-pdf:hover {
+    background: #008cff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Maximum width */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Traveler Inputs */
+.traveler-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-row label {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.input-row input {
+    flex: 1;
+    max-width: 100px;
+    text-align: center;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
